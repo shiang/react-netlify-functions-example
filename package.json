@@ -56,13 +56,15 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.6.0",
     "@hot-loader/react-dom": "^16.10.2",
+    "apollo-server-lambda": "^2.9.7",
     "core-js": "3",
+    "graphql": "^14.5.8",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-hot-loader": "^4.12.15"
+    "react-hot-loader": "^4.12.15",
+    "regenerator-runtime": "^0.13.3"
   },
   "repository": {
     "type": "git",

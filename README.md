@@ -1,1 +1,1 @@
-# React Boilerplate Typescript
+# Netlify Functions Example
