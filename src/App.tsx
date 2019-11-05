@@ -5,10 +5,11 @@ import { IdentityContextProvider } from 'react-netlify-identity-widget'
 import Auth from './Auth'
 
 const App: React.FC<{}> = () => {
-  const url = process.env.NETLIFY_URL!
+  console.log(process.env)
+  // const url = process.env.NETLIFY_URL!
   return (
     <main>
-      <IdentityContextProvider url={url}>
+      <IdentityContextProvider url='https://wizardly-thompson-a57bd1.netlify.com/'>
         <Auth>
           <Counter />
         </Auth>
