@@ -4,12 +4,15 @@
   functions = "functions"
   publish = "./dist"
 
-  ## Uncomment to use this redirect for Single Page Applications like create-react-app.
-  ## Not needed for static site generators.
-  [[redirects]]
+## Uncomment to use this redirect for Single Page Applications like create-react-app.
+## Not needed for static site generators.
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[context.production]
+  NETLIFY_URL = "https://wizardly-thompson-a57bd1.netlify.com/"
 
   ## (optional) Settings for Netlify Dev
   ## https://github.com/netlify/cli/blob/master/docs/netlify-dev.md#project-detection
