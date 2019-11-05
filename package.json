@@ -14,12 +14,32 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && npm run lint && npm run check-types && npm run test"
+      "pre-commit": "pretty-quick --staged && npm run lint && npm run test"
     }
   },
   "author": "Ryan Liu",
   "license": "ISC",
   "keywords": [],
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,ts,jsx,tsx}",
+      "!**/node_modules/**",
+      "!**/__tests__/**",
+      "!src/types/**",
+      "!src/testing-utils/**",
+      "!src/graphQL/**"
+    ],
+    "coverageReporters": [
+      "text",
+      "text-summary"
+    ],
+    "projects": [
+      "./test/jest.lint.js",
+      "./test/jest.testing.js",
+      "./test/jest.tsc.js"
+    ]
+  },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
@@ -43,7 +63,10 @@
     "eslint-plugin-react-hooks": "^2.2.0",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^3.0.9",
+    "identity-obj-proxy": "^3.0.0",
+    "isomorphic-fetch": "^2.2.1",
     "jest": "^24.9.0",
+    "jest-runner-eslint": "^0.7.5",
     "prettier": "^1.18.2",
     "pretty-quick": "^2.0.0",
     "react-axe": "^3.3.0",
@@ -57,13 +80,19 @@
   },
   "dependencies": {
     "@hot-loader/react-dom": "^16.10.2",
+    "@reach/dialog": "^0.5.0",
+    "@reach/tabs": "^0.5.0",
+    "@reach/visually-hidden": "^0.5.0",
     "apollo-server-lambda": "^2.9.7",
     "core-js": "3",
+    "dotenv": "^8.2.0",
     "graphql": "^14.5.8",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-hot-loader": "^4.12.15",
+    "react-netlify-identity": "0.1.9",
+    "react-netlify-identity-widget": "^0.2.5",
     "regenerator-runtime": "^0.13.3"
   },
   "repository": {
