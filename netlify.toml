@@ -12,7 +12,8 @@
   status = 200
 
 [context.production]
-  NETLIFY_URL = "https://wizardly-thompson-a57bd1.netlify.com/"
+  [context.production.environment]
+    NETLIFY_URL = "https://wizardly-thompson-a57bd1.netlify.com/"
 
   ## (optional) Settings for Netlify Dev
   ## https://github.com/netlify/cli/blob/master/docs/netlify-dev.md#project-detection
