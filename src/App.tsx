@@ -6,10 +6,13 @@ import Auth from './Auth'
 
 const App: React.FC<{}> = () => {
   console.log(process.env)
-  // const url = process.env.NETLIFY_URL!
+  const url =
+    process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test'
+      ? process.env.NETLIFY_URL!
+      : process.env.NETLIFY_PUBLIC_URL!
   return (
     <main>
-      <IdentityContextProvider url='https://wizardly-thompson-a57bd1.netlify.com/'>
+      <IdentityContextProvider url={url}>
         <Auth>
           <Counter />
         </Auth>

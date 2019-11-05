@@ -5,6 +5,7 @@ const CompressionPlugin = require('compression-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const baseConfig = require('./webpack.config.base')
+const webpack = require('webpack')
 
 module.exports = merge(baseConfig, {
   mode: 'production',
@@ -45,6 +46,11 @@ module.exports = merge(baseConfig, {
       analyzerMode: 'static',
       openAnalyzer: false,
       reportFilename: 'bundle_sizes.html'
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NETLIFY_PUBLIC_URL': JSON.stringify(
+        process.env.NETLIFY_PUBLIC_URL
+      )
     })
   ],
   externals: {
