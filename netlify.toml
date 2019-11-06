@@ -13,11 +13,11 @@
 
   ## (optional) Settings for Netlify Dev
   ## https://github.com/netlify/cli/blob/master/docs/netlify-dev.md#project-detection
-  [dev]
-    command = "yarn dev" # Command to start your dev server
-    port = 8888 # Port that the dev server will be listening on
-    functionsPort = 34567 # port for functions server
-    targetPort = 9000 # Port of target app server
-    publish = "dist" # Folder with the static content for _redirect file
+  #[dev]
+    #command = "yarn dev" # Command to start your dev server
+    #port = 9000 # Port that the dev server will be listening on
+    #functionsPort = 34567 # port for functions server
+    #targetPort = 9000
+    #publish = "dist" # Folder with the static content for _redirect file
 
   ## more info on configuring this file: https://www.netlify.com/docs/netlify-toml-reference/
